@@ -21,24 +21,24 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: packages_apt_postgresql_org; Type: TABLE; Schema: public; Owner: postgres
+-- Name: packages_apt_postgresql_org; Type: TABLE; Schema: pagila; Owner: postgres
 --
 
-CREATE TABLE public.packages_apt_postgresql_org (
+CREATE TABLE pagila.packages_apt_postgresql_org (
     id integer NOT NULL,
     last_updated timestamp without time zone DEFAULT now(),
     aptdata jsonb
 );
 
 
-ALTER TABLE public.packages_apt_postgresql_org OWNER TO postgres;
+ALTER TABLE pagila.packages_apt_postgresql_org OWNER TO postgres;
 
 --
--- Name: newaptdata_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: newaptdata_id_seq; Type: SEQUENCE; Schema: pagila; Owner: postgres
 --
 
-ALTER TABLE public.packages_apt_postgresql_org ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
-    SEQUENCE NAME public.newaptdata_id_seq
+ALTER TABLE pagila.packages_apt_postgresql_org ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME pagila.newaptdata_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -48,24 +48,24 @@ ALTER TABLE public.packages_apt_postgresql_org ALTER COLUMN id ADD GENERATED ALW
 
 
 --
--- Name: packages_yum_postgresql_org; Type: TABLE; Schema: public; Owner: postgres
+-- Name: packages_yum_postgresql_org; Type: TABLE; Schema: pagila; Owner: postgres
 --
 
-CREATE TABLE public.packages_yum_postgresql_org (
+CREATE TABLE pagila.packages_yum_postgresql_org (
     id integer NOT NULL,
     last_updated timestamp without time zone DEFAULT now(),
     yumdata jsonb
 );
 
 
-ALTER TABLE public.packages_yum_postgresql_org OWNER TO postgres;
+ALTER TABLE pagila.packages_yum_postgresql_org OWNER TO postgres;
 
 --
--- Name: newyumdata_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: newyumdata_id_seq; Type: SEQUENCE; Schema: pagila; Owner: postgres
 --
 
-ALTER TABLE public.packages_yum_postgresql_org ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
-    SEQUENCE NAME public.newyumdata_id_seq
+ALTER TABLE pagila.packages_yum_postgresql_org ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME pagila.newyumdata_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE

@@ -17,10 +17,10 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Data for Name: actor; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: actor; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.actor (actor_id, first_name, last_name, last_update) FROM stdin;
+COPY pagila.actor (actor_id, first_name, last_name, last_update) FROM stdin;
 1	PENELOPE	GUINESS	2022-02-15 09:34:33+00
 2	NICK	WAHLBERG	2022-02-15 09:34:33+00
 3	ED	CHASE	2022-02-15 09:34:33+00
@@ -225,10 +225,10 @@ COPY public.actor (actor_id, first_name, last_name, last_update) FROM stdin;
 
 
 --
--- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: country; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.country (country_id, country, last_update) FROM stdin;
+COPY pagila.country (country_id, country, last_update) FROM stdin;
 1	Afghanistan	2022-02-15 09:44:00+00
 2	Algeria	2022-02-15 09:44:00+00
 3	American Samoa	2022-02-15 09:44:00+00
@@ -253,9 +253,9 @@ COPY public.country (country_id, country, last_update) FROM stdin;
 22	Chile	2022-02-15 09:44:00+00
 23	China	2022-02-15 09:44:00+00
 24	Colombia	2022-02-15 09:44:00+00
-25	Congo, The Democratic Republic of the	2022-02-15 09:44:00+00
-26	Czech Republic	2022-02-15 09:44:00+00
-27	Dominican Republic	2022-02-15 09:44:00+00
+25	Congo, The Democratic Repagila of the	2022-02-15 09:44:00+00
+26	Czech Repagila	2022-02-15 09:44:00+00
+27	Dominican Repagila	2022-02-15 09:44:00+00
 28	Ecuador	2022-02-15 09:44:00+00
 29	Egypt	2022-02-15 09:44:00+00
 30	Estonia	2022-02-15 09:44:00+00
@@ -342,10 +342,10 @@ COPY public.country (country_id, country, last_update) FROM stdin;
 
 
 --
--- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: city; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.city (city_id, city, country_id, last_update) FROM stdin;
+COPY pagila.city (city_id, city, country_id, last_update) FROM stdin;
 1	A Corua (La Corua)	87	2022-02-15 09:45:25+00
 2	Abha	82	2022-02-15 09:45:25+00
 3	Abu Dhabi	101	2022-02-15 09:45:25+00
@@ -950,10 +950,10 @@ COPY public.city (city_id, city, country_id, last_update) FROM stdin;
 
 
 --
--- Data for Name: address; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: address; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.address (address_id, address, address2, district, city_id, postal_code, phone, last_update) FROM stdin;
+COPY pagila.address (address_id, address, address2, district, city_id, postal_code, phone, last_update) FROM stdin;
 1	47 MySakila Drive	\N	Alberta	300			2022-02-15 09:45:30+00
 2	28 MySQL Boulevard	\N	QLD	576			2022-02-15 09:45:30+00
 3	23 Workhaven Lane	\N	Alberta	300		14033335568	2022-02-15 09:45:30+00
@@ -1561,10 +1561,10 @@ COPY public.address (address_id, address, address2, district, city_id, postal_co
 
 
 --
--- Data for Name: category; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: category; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.category (category_id, name, last_update) FROM stdin;
+COPY pagila.category (category_id, name, last_update) FROM stdin;
 1	Action	2022-02-15 09:46:27+00
 2	Animation	2022-02-15 09:46:27+00
 3	Children	2022-02-15 09:46:27+00
@@ -1585,20 +1585,20 @@ COPY public.category (category_id, name, last_update) FROM stdin;
 
 
 --
--- Data for Name: store; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: store; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.store (store_id, manager_staff_id, address_id, last_update) FROM stdin;
+COPY pagila.store (store_id, manager_staff_id, address_id, last_update) FROM stdin;
 1	1	1	2022-02-15 09:57:12+00
 2	2	2	2022-02-15 09:57:12+00
 \.
 
 
 --
--- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: customer; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.customer (customer_id, store_id, first_name, last_name, email, address_id, activebool, create_date, last_update, active) FROM stdin;
+COPY pagila.customer (customer_id, store_id, first_name, last_name, email, address_id, activebool, create_date, last_update, active) FROM stdin;
 1	1	MARY	SMITH	MARY.SMITH@sakilacustomer.org	5	t	2022-02-14	2022-02-15 09:57:20+00	1
 2	1	PATRICIA	JOHNSON	PATRICIA.JOHNSON@sakilacustomer.org	6	t	2022-02-14	2022-02-15 09:57:20+00	1
 3	1	LINDA	WILLIAMS	LINDA.WILLIAMS@sakilacustomer.org	7	t	2022-02-14	2022-02-15 09:57:20+00	1
@@ -2202,10 +2202,10 @@ COPY public.customer (customer_id, store_id, first_name, last_name, email, addre
 
 
 --
--- Data for Name: language; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: language; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.language (language_id, name, last_update) FROM stdin;
+COPY pagila.language (language_id, name, last_update) FROM stdin;
 1	English             	2022-02-15 10:02:19+00
 2	Italian             	2022-02-15 10:02:19+00
 3	Japanese            	2022-02-15 10:02:19+00
@@ -2216,10 +2216,10 @@ COPY public.language (language_id, name, last_update) FROM stdin;
 
 
 --
--- Data for Name: film; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: film; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.film (film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating, last_update, special_features, fulltext) FROM stdin;
+COPY pagila.film (film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating, last_update, special_features, fulltext) FROM stdin;
 1	ACADEMY DINOSAUR	A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies	2006	1	\N	6	0.99	86	20.99	PG	2022-09-10 17:46:03.905795+01	{"Deleted Scenes","Behind the Scenes"}	'academi':1 'battl':15 'canadian':20 'dinosaur':2 'drama':5 'epic':4 'feminist':8 'mad':11 'must':14 'rocki':21 'scientist':12 'teacher':17
 2	ACE GOLDFINGER	A Astounding Epistle of a Database Administrator And a Explorer who must Find a Car in Ancient China	2006	1	\N	3	4.99	48	12.99	G	2022-09-10 17:46:03.905795+01	{Trailers,"Deleted Scenes"}	'ace':1 'administr':9 'ancient':19 'astound':4 'car':17 'china':20 'databas':8 'epistl':5 'explor':12 'find':15 'goldfing':2 'must':14
 3	ADAPTATION HOLES	A Astounding Reflection of a Lumberjack And a Car who must Sink a Lumberjack in A Baloon Factory	2006	1	\N	7	2.99	50	18.99	NC-17	2022-09-10 17:46:03.905795+01	{Trailers,"Deleted Scenes"}	'adapt':1 'astound':4 'baloon':19 'car':11 'factori':20 'hole':2 'lumberjack':8,16 'must':13 'reflect':5 'sink':14
@@ -3224,10 +3224,10 @@ COPY public.film (film_id, title, description, release_year, language_id, origin
 
 
 --
--- Data for Name: film_actor; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: film_actor; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.film_actor (actor_id, film_id, last_update) FROM stdin;
+COPY pagila.film_actor (actor_id, film_id, last_update) FROM stdin;
 1	1	2022-02-15 10:05:03+00
 1	23	2022-02-15 10:05:03+00
 1	25	2022-02-15 10:05:03+00
@@ -8694,10 +8694,10 @@ COPY public.film_actor (actor_id, film_id, last_update) FROM stdin;
 
 
 --
--- Data for Name: film_category; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: film_category; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.film_category (film_id, category_id, last_update) FROM stdin;
+COPY pagila.film_category (film_id, category_id, last_update) FROM stdin;
 1	6	2022-02-15 10:07:09+00
 2	11	2022-02-15 10:07:09+00
 3	6	2022-02-15 10:07:09+00
@@ -9702,10 +9702,10 @@ COPY public.film_category (film_id, category_id, last_update) FROM stdin;
 
 
 --
--- Data for Name: inventory; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: inventory; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.inventory (inventory_id, film_id, store_id, last_update) FROM stdin;
+COPY pagila.inventory (inventory_id, film_id, store_id, last_update) FROM stdin;
 1	1	1	2022-02-15 10:09:17+00
 2	1	1	2022-02-15 10:09:17+00
 3	1	1	2022-02-15 10:09:17+00
@@ -14291,20 +14291,20 @@ COPY public.inventory (inventory_id, film_id, store_id, last_update) FROM stdin;
 
 
 --
--- Data for Name: staff; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: staff; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.staff (staff_id, first_name, last_name, address_id, email, store_id, active, username, password, last_update, picture) FROM stdin;
+COPY pagila.staff (staff_id, first_name, last_name, address_id, email, store_id, active, username, password, last_update, picture) FROM stdin;
 1	Mike	Hillyer	3	Mike.Hillyer@sakilastaff.com	1	t	Mike	8cb2237d0679ca88db6464eac60da96345513964	2022-05-16 16:13:11.79328+01	\\x89504e470d0a5a0a
 2	Jon	Stephens	4	Jon.Stephens@sakilastaff.com	2	t	Jon	8cb2237d0679ca88db6464eac60da96345513964	2022-05-16 16:13:11.79328+01	\N
 \.
 
 
 --
--- Data for Name: rental; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rental; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.rental (rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update) FROM stdin;
+COPY pagila.rental (rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update) FROM stdin;
 2	2022-05-24 22:54:33+01	1525	459	2022-05-28 19:40:33+01	1	2022-02-16 02:30:53+00
 3	2022-05-24 23:03:39+01	1711	408	2022-06-01 22:12:39+01	1	2022-02-16 02:30:53+00
 4	2022-05-24 23:04:41+01	2452	333	2022-06-03 01:43:41+01	2	2022-02-16 02:30:53+00
@@ -30353,10 +30353,10 @@ COPY public.rental (rental_id, rental_date, inventory_id, customer_id, return_da
 
 
 --
--- Data for Name: payment_p2022_01; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: payment_p2022_01; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.payment_p2022_01 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
+COPY pagila.payment_p2022_01 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
 16051	269	1	98	0.99	2022-01-29 01:58:52.222594+00
 16065	274	1	147	2.99	2022-01-25 12:14:16.895377+00
 16109	297	2	143	0.99	2022-01-28 00:49:49.128218+00
@@ -31084,10 +31084,10 @@ COPY public.payment_p2022_01 (payment_id, customer_id, staff_id, rental_id, amou
 
 
 --
--- Data for Name: payment_p2022_02; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: payment_p2022_02; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.payment_p2022_02 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
+COPY pagila.payment_p2022_02 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
 16056	270	1	193	1.99	2022-02-03 01:49:30.663659+00
 16075	278	1	1092	4.99	2022-02-14 16:08:09.981165+00
 16077	279	2	1019	0.99	2022-02-09 21:43:26.740315+00
@@ -33493,10 +33493,10 @@ COPY public.payment_p2022_02 (payment_id, customer_id, staff_id, rental_id, amou
 
 
 --
--- Data for Name: payment_p2022_03; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: payment_p2022_03; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.payment_p2022_03 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
+COPY pagila.payment_p2022_03 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
 16053	269	2	703	0.99	2022-03-02 19:51:40.813503+00
 16058	271	1	1096	8.99	2022-03-19 06:19:47.019162+00
 16059	272	1	33	0.99	2022-03-12 13:32:36.628975+00
@@ -36214,10 +36214,10 @@ COPY public.payment_p2022_03 (payment_id, customer_id, staff_id, rental_id, amou
 
 
 --
--- Data for Name: payment_p2022_04; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: payment_p2022_04; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.payment_p2022_04 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
+COPY pagila.payment_p2022_04 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
 16066	274	1	208	4.99	2022-04-15 13:28:07.452161+01
 16069	274	2	474	2.99	2022-04-27 19:46:10.151444+01
 16074	277	2	308	6.99	2022-04-04 11:51:07.496345+01
@@ -38769,10 +38769,10 @@ COPY public.payment_p2022_04 (payment_id, customer_id, staff_id, rental_id, amou
 
 
 --
--- Data for Name: payment_p2022_05; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: payment_p2022_05; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.payment_p2022_05 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
+COPY pagila.payment_p2022_05 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
 16055	269	2	1099	2.99	2022-05-20 16:54:02.174545+01
 16057	270	1	1040	4.99	2022-05-11 10:27:17.752545+01
 16067	274	2	301	2.99	2022-05-11 04:38:43.477404+01
@@ -41454,10 +41454,10 @@ COPY public.payment_p2022_05 (payment_id, customer_id, staff_id, rental_id, amou
 
 
 --
--- Data for Name: payment_p2022_06; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: payment_p2022_06; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.payment_p2022_06 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
+COPY pagila.payment_p2022_06 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
 16050	269	2	7	1.99	2022-06-21 08:41:50.707316+01
 16052	269	2	678	6.99	2022-06-26 23:37:21.783785+01
 16054	269	1	750	4.99	2022-06-02 04:29:53.30199+01
@@ -44116,10 +44116,10 @@ COPY public.payment_p2022_06 (payment_id, customer_id, staff_id, rental_id, amou
 
 
 --
--- Data for Name: payment_p2022_07; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: payment_p2022_07; Type: TABLE DATA; Schema: pagila; Owner: postgres
 --
 
-COPY public.payment_p2022_07 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
+COPY pagila.payment_p2022_07 (payment_id, customer_id, staff_id, rental_id, amount, payment_date) FROM stdin;
 16061	272	1	1041	6.99	2022-07-19 07:32:02.911937+01
 16064	273	2	980	0.99	2022-07-07 08:15:37.160099+01
 16071	275	2	336	2.99	2022-07-04 10:47:03.440928+01
@@ -46458,94 +46458,94 @@ COPY public.payment_p2022_07 (payment_id, customer_id, staff_id, rental_id, amou
 
 
 --
--- Name: actor_actor_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: actor_actor_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.actor_actor_id_seq', 200, true);
-
-
---
--- Name: address_address_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.address_address_id_seq', 605, true);
+SELECT pg_catalog.setval('pagila.actor_actor_id_seq', 200, true);
 
 
 --
--- Name: category_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: address_address_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.category_category_id_seq', 16, true);
-
-
---
--- Name: city_city_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.city_city_id_seq', 600, true);
+SELECT pg_catalog.setval('pagila.address_address_id_seq', 605, true);
 
 
 --
--- Name: country_country_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: category_category_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.country_country_id_seq', 109, true);
-
-
---
--- Name: customer_customer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.customer_customer_id_seq', 599, true);
+SELECT pg_catalog.setval('pagila.category_category_id_seq', 16, true);
 
 
 --
--- Name: film_film_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: city_city_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.film_film_id_seq', 1000, true);
-
-
---
--- Name: inventory_inventory_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.inventory_inventory_id_seq', 4581, true);
+SELECT pg_catalog.setval('pagila.city_city_id_seq', 600, true);
 
 
 --
--- Name: language_language_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: country_country_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.language_language_id_seq', 6, true);
-
-
---
--- Name: payment_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.payment_payment_id_seq', 32098, true);
+SELECT pg_catalog.setval('pagila.country_country_id_seq', 109, true);
 
 
 --
--- Name: rental_rental_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: customer_customer_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.rental_rental_id_seq', 16049, true);
-
-
---
--- Name: staff_staff_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('public.staff_staff_id_seq', 2, true);
+SELECT pg_catalog.setval('pagila.customer_customer_id_seq', 599, true);
 
 
 --
--- Name: store_store_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: film_film_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.store_store_id_seq', 2, true);
+SELECT pg_catalog.setval('pagila.film_film_id_seq', 1000, true);
+
+
+--
+-- Name: inventory_inventory_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
+--
+
+SELECT pg_catalog.setval('pagila.inventory_inventory_id_seq', 4581, true);
+
+
+--
+-- Name: language_language_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
+--
+
+SELECT pg_catalog.setval('pagila.language_language_id_seq', 6, true);
+
+
+--
+-- Name: payment_payment_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
+--
+
+SELECT pg_catalog.setval('pagila.payment_payment_id_seq', 32098, true);
+
+
+--
+-- Name: rental_rental_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
+--
+
+SELECT pg_catalog.setval('pagila.rental_rental_id_seq', 16049, true);
+
+
+--
+-- Name: staff_staff_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
+--
+
+SELECT pg_catalog.setval('pagila.staff_staff_id_seq', 2, true);
+
+
+--
+-- Name: store_store_id_seq; Type: SEQUENCE SET; Schema: pagila; Owner: postgres
+--
+
+SELECT pg_catalog.setval('pagila.store_store_id_seq', 2, true);
 
 
 --
